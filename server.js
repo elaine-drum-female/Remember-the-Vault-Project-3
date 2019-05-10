@@ -19,9 +19,27 @@ if (process.env.NODE_ENV === "production") {
 
 //Models
 const {User} = require('./models/user');
+const {Category} = require('./models/category');
 
 //Middleware
 const { auth } = require ('./middleware/auth'); 
+
+//======================================
+//               CATEGORY
+//======================================
+
+app.post('/api/product/category', auth, (req, res) => {
+  const category = new Category(req.body);
+  category.save((err, doc) => {
+    if(err) return res.json({success:false, err});
+    res.status(200).json({
+      success:true,
+      category:doc
+    });
+  });
+});
+
+
 
 //======================================
 //               USERS
