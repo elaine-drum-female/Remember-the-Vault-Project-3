@@ -20,10 +20,25 @@ if (process.env.NODE_ENV === "production") {
 //Models
 const {User} = require('./models/user');
 const {Category} = require('./models/category');
+const {Product} = require('./models/product');
 
 //Middleware
 const { auth } = require ('./middleware/auth'); 
 const { admin } = require ('./middleware/admin'); 
+
+//======================================
+//               PRODUCTS
+//======================================
+app.post('/api/product/article', auth, admin, (req, res) => {
+  const product = new Product(req.body);
+  product.save((err, doc) => {
+    if(err) return res.json({success:false, err});
+    res.status(200).json({
+      success:true,
+      productData: doc
+    });
+  });
+});
 
 //======================================
 //               CATEGORY
