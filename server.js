@@ -20,6 +20,25 @@ if (process.env.NODE_ENV === "production") {
 //Models
 const {User} = require('./models/user');
 
+//Middleware
+const { auth } = require ('./middleware/auth'); 
+
+//======================================
+//               USERS
+//======================================
+
+//This goes to auth after receiving a request and response
+app.get('/api/users/auth', auth, (req, res) => {
+  res.status(200).json({
+    isAdmin: req.user.role === 0 ? false: true,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    lastname: req.user.lastname,
+    role: req.user.role
+  });
+});
+
 //USERS this is correlated with user model
 app.post('/api/users/register', (req, res) => {
   const user = new User(req.body);
@@ -28,7 +47,7 @@ app.post('/api/users/register', (req, res) => {
     if(err) return res.json({success:false, err});
     res.status(200).json({
       success:true,
-      userData:doc
+      //userData:doc
     });
   });
 });
