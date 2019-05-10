@@ -35,7 +35,7 @@ app.post('/api/product/article', auth, admin, (req, res) => {
     if(err) return res.json({success:false, err});
     res.status(200).json({
       success:true,
-      productData: doc
+      article: doc
     });
   });
 });
