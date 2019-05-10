@@ -3,10 +3,13 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 const mongoose = require("mongoose");
 require('dotenv').config();
 mongoose.connect(process.env.MYDATABASE);
+
+
 
 const PORT = process.env.PORT || 3005;
 
