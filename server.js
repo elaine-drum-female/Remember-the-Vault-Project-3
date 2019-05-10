@@ -23,12 +23,13 @@ const {Category} = require('./models/category');
 
 //Middleware
 const { auth } = require ('./middleware/auth'); 
+const { admin } = require ('./middleware/admin'); 
 
 //======================================
 //               CATEGORY
 //======================================
 
-app.post('/api/product/category', auth, (req, res) => {
+app.post('/api/product/category', auth, admin, (req, res) => {
   const category = new Category(req.body);
   category.save((err, doc) => {
     if(err) return res.json({success:false, err});
@@ -36,6 +37,14 @@ app.post('/api/product/category', auth, (req, res) => {
       success:true,
       category:doc
     });
+  });
+});
+
+//Fetching ALL categories
+app.get('/api/product/categories', (req, res) => {
+  Category.find({}, (err, categories)=> {
+    if(err) return res.status(400).send(err);
+    res.status(200).send(categories);
   });
 });
 
