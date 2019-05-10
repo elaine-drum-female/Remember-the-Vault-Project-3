@@ -9,7 +9,7 @@ app.use(cookieParser());
 
 const mongoose = require("mongoose");
 require('dotenv').config();
-mongoose.connect(process.env.MYDATABASE);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Remember-the-Vault-Project-3");
 
 
 
