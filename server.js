@@ -73,6 +73,20 @@ app.post('/api/users/login', (req, res) => {
 
 });
 
+//Logout route ...can ONLY log out if they logged in and auth
+app.get('/api/users/logout', auth,(req, res) => {
+  // Grab user data 
+  User.findOneAndUpdate(
+    {_id: req.user._id},
+    { token: " "},
+    (err, doc)=> {
+      if(err) return res.json({success:false, err})
+      return res.status(200).send({
+        success:true
+      });
+    });
+});
+
 const PORT = process.env.PORT || 3005;
 
 app.listen(PORT, () => {
