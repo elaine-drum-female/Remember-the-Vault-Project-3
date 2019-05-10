@@ -1,0 +1,19 @@
+{
+  "name": "remember-the-vault-project-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaine-drum-female/Remember-the-Vault-Project-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elaine-drum-female/Remember-the-Vault-Project-3/issues"
+  },
+  "homepage": "https://github.com/elaine-drum-female/Remember-the-Vault-Project-3#readme"
+}
