@@ -83,7 +83,7 @@ userSchema.methods.generateToken = function (cb) {
     });
 }
 
-userSchema.methods.findByToken = function(token, cb) {
+userSchema.statics.findByToken = function(token, cb) {
     var user = this;
     //Verify whether this is the correct token for that user id
     jwt.verify(token, process.env.SECRET, function(err, decode) {
