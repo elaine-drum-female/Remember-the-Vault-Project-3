@@ -31,7 +31,28 @@ app.post('/api/users/register', (req, res) => {
       userData:doc
     });
   });
-})
+});
+
+app.post('/api/users/login', (req, res) => {
+  // Use the 'User' from models to find the email to see if user has registered or not
+    User.findOne({'email':req.body.email}, (err, user) => {
+      //If there is no user in the database then send a message Email not found
+      if(!user) return res.json({loginSuccess: false, message: "Email not found"});
+      // IF the user is in the database, grab password and check password
+      user.compareuserPassword(req.body.password, (err, passwordCheck) => {
+        // IF the password is wrong send a message saying Wrong password!
+        if(!passwordCheck) return res.json({loginSuccess: false, message: "Wrong password!"});
+        // Generate a token
+        user.generateToken((err, user)=> {
+          if(err) return res.status(400).send(err);
+          res.cookie('x_auth', user.token).status(200).json({
+            loginSuccess:true
+          })
+        });
+      });
+    });
+
+});
 
 const PORT = process.env.PORT || 3005;
 
