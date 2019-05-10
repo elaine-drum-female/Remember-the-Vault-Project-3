@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 
-const routes = require("./routes");
-app.use(routes);
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
@@ -19,8 +17,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Remember-the-Va
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
-  
-
   
 
 
