@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormField from "../utils/Form/formfield"
 import { update} from "../utils/Form/formActions";
+import MyButton from "../utils/button";
 
 class Login extends Component {
     state = {
@@ -72,6 +73,13 @@ class Login extends Component {
                         id={'password'}
                         formData={this.state.formData.password}
                         change={(element)=> this.updateForm(element)}
+                    />
+
+                    <MyButton 
+                        type="default"
+                        title="Sign In"
+                        linkTo="/sign_in"
+                        
                     />
                 </form>
             </div>
