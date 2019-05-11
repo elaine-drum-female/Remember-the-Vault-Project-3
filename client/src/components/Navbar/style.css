@@ -7,3 +7,7 @@
 .bground-color {
     background:silver;
 }
+
+.hidden {
+    display:none;
+}
