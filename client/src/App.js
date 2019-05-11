@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/hoc/wrapper";
 import NewUser from "./components/NewRegister/";
@@ -16,7 +15,7 @@ function App() {
       <Switch>
         <Route exact path="/register_login" component={RegisterLogin}/>
         <Route exact path="/register" component={NewUser} />
-        <Route exact path="/"component={Home}/>
+        <Route exact path="/signed_in" component={RegisterLogin} />
       </Switch>
       </Wrapper>
       </div>
