@@ -3,3 +3,7 @@ button, input {
     padding:5px;
     margin-bottom:15px;
 }
+
+a:hover {
+    text-decoration:none;
+}
