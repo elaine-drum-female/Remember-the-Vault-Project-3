@@ -1,5 +1,13 @@
 import React from 'react';
 
+const inputStyles = {
+    input: {
+        marginBottom:'5px',
+        width: '100%',
+        padding: '5px'
+    }
+}
+
 const FormField = ({formData, change, id}) => {
 const renderTemplate = () => {
     let formTemplate = null;
@@ -7,7 +15,7 @@ const renderTemplate = () => {
     switch(formData.element) {
         case('input'):
         formTemplate = (
-            <div className="formBlock">
+            <div style={inputStyles.input}>
                 <input
                     {...formData.config}
                     value={formData.value}
