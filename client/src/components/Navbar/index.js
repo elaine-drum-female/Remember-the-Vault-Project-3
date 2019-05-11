@@ -9,8 +9,7 @@ function Navbar() {
         <nav className="bground-color">
           <ul className="nav">
               <Link className="navbar-brand" to="/register_login">Remember the Vault</Link> 
-              <Link className="navbar-brand hidden" to="/">Books</Link> 
-              <Link className="navbar-brand hidden" to="/">Movies</Link> 
+              <Link className="navbar-brand" to="/register">Register</Link> 
               <ul className="nav justify-content-end ml-auto">
                 <li className="nav-item">
                   <i className="fas fa-user-circle"></i>
