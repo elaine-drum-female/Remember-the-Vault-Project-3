@@ -12,7 +12,7 @@ const RegisterLogin = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada auctor lacus, quis ultricies magna fermentum ac. Quisque tristique dolor nec ultrices sodales. Sed sodales id magna maximus semper. Proin ultrices, lectus in imperdiet tincidunt, felis sapien rhoncus metus, nec sodales neque velit quis nisl. Fusce posuere fringilla iaculis. Maecenas.</p>
                     <MyButton 
                         type="default"
-                        title="Make an account"
+                        title="Register Here"
                         linkTo="/register"
                         
                     />
