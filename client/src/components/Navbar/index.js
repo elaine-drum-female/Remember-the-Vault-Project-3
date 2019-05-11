@@ -8,7 +8,7 @@ function Navbar() {
     <div className="nav-container">
         <nav className="bground-color">
           <ul className="nav">
-              <Link className="navbar-brand" to="/">Remember the Vault</Link> 
+              <Link className="navbar-brand" to="/register_login">Remember the Vault</Link> 
               <ul className="nav justify-content-end ml-auto">
                 <li className="nav-item">
                   <i className="fas fa-user-circle"></i>
