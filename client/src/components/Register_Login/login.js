@@ -78,7 +78,7 @@ class Login extends Component {
                     <MyButton 
                         type="default"
                         title="Sign In"
-                        linkTo="/sign_in"
+                        linkTo="/signed_in"
                         
                     />
                 </form>
