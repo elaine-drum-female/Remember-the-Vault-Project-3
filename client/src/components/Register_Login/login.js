@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FormField from "../utils/Form/formfield";
+import FormField from "../utils/Form/formfield"
+import { update} from "../utils/Form/formActions";
 
 class Login extends Component {
     state = {
@@ -15,11 +16,12 @@ class Login extends Component {
                     placeholder: "Please enter your email"
                 },
                 validation: {
-                    required:true,
-                    email: true
+                    required:true
+                    
                 },
 
                 valid:false,
+                touched: false,
                 validationMessage: ''
             },
 
@@ -36,6 +38,7 @@ class Login extends Component {
                 },
 
                 valid:false,
+                touched: false,
                 validationMessage:''
             }
 
@@ -44,8 +47,12 @@ class Login extends Component {
 
     }
 
-    updateForm = () => {
-
+    updateForm = (element) => {
+        const newFormData = update(element, this.state.formData, 'login');
+        this.setState({
+            formError: false,
+            formData: newFormData
+        });
     }
 
     submitForm = () => {
