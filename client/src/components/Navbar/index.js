@@ -16,7 +16,7 @@ function Navbar() {
                   <Link className="navbar-brand" to="/my_account">My Account</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="navbar-brand" to="/sign_out">Sign Out</Link>
+                  <Link className="navbar-brand" to="/signed_in">Signed In</Link>
                 </li>
               </ul>
           </ul>
