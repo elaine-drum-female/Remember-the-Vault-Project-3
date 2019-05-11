@@ -17,6 +17,10 @@
     width:50%;
 }
 
+p {
+    padding-right:15px;
+}
+
 .right {
     float:right;
     width:50%;
