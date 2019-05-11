@@ -14,10 +14,10 @@ function Navbar() {
               <ul className="nav justify-content-end ml-auto">
                 <li className="nav-item">
                   <i className="fas fa-user-circle"></i>
-                  <Link className="navbar-brand" to="/">My Account</Link>
+                  <Link className="navbar-brand" to="/my_account">My Account</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="navbar-brand" to="/">Sign Out</Link>
+                  <Link className="navbar-brand" to="/sign_out">Sign Out</Link>
                 </li>
               </ul>
           </ul>
