@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormField from "../utils/Form/formfield";
 
 class Login extends Component {
     state = {
@@ -19,7 +20,7 @@ class Login extends Component {
                 },
 
                 valid:false,
-                validationMessage = ''
+                validationMessage: ''
             },
 
             password: {
@@ -35,7 +36,7 @@ class Login extends Component {
                 },
 
                 valid:false,
-                validationMessage = ''
+                validationMessage:''
             }
 
         }
@@ -43,6 +44,9 @@ class Login extends Component {
 
     }
 
+    updateForm = () => {
+
+    }
 
     submitForm = () => {
 
@@ -51,6 +55,11 @@ class Login extends Component {
         return (
             <div className="signin_wrapper">
                 <form onSubmit={(event) => this.submitForm(event)}>
+                    <FormField
+                        id={'email'}
+                        formData={this.state.formData.email}
+                        change={(element)=> this.updateForm(element)}
+                    />
                 </form>
             </div>
         );
