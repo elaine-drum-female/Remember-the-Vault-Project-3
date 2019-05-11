@@ -18,7 +18,9 @@ const RegisterLogin = () => {
                     />
                 </div>
                 <div className="right">
-                    <h1>New Customers</h1>
+                    <h2>Registered Customers</h2>
+                    <p>If you have an account please log in</p>
+                    LOGIN
                 </div>
             </div>
         </div>
