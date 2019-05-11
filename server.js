@@ -30,6 +30,14 @@ const { admin } = require ('./middleware/admin');
 //               PRODUCTS
 //======================================
 
+//Fetch all Products
+app.get("/api/product/articles", (req, res) => {
+  Product.find({}, (err, articles) => {
+    if(err) return res.status(400).send(err);
+    res.status(200).send(articles);
+  });
+}),
+
 app.get("/api/product/articles_by_id", (req, res)=> {
   //Figure out the type of ID
   let type = req.query.type;
