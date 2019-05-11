@@ -1,6 +1,6 @@
 import React from 'react';
 import MyButton from "../utils/button";
-
+import Login from "../Register_Login/login";
 import "./style.css";
 
 const RegisterLogin = () => {
@@ -20,7 +20,7 @@ const RegisterLogin = () => {
                 <div className="right">
                     <h2>Registered Customers</h2>
                     <p>If you have an account please log in</p>
-                    LOGIN
+                    <Login />
                 </div>
             </div>
         </div>
