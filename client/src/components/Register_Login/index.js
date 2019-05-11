@@ -1,5 +1,7 @@
 import React from 'react';
+import MyButton from "../utils/button";
 
+import "./style.css";
 
 const RegisterLogin = () => {
     return (
@@ -8,13 +10,17 @@ const RegisterLogin = () => {
                 <div className="left">
                     <h1> New Customers</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada auctor lacus, quis ultricies magna fermentum ac. Quisque tristique dolor nec ultrices sodales. Sed sodales id magna maximus semper. Proin ultrices, lectus in imperdiet tincidunt, felis sapien rhoncus metus, nec sodales neque velit quis nisl. Fusce posuere fringilla iaculis. Maecenas.</p>
-                    
+                    <MyButton 
+                        type="default"
+                        title="Make an account"
+                        linkTo="/register"
+                        
+                    />
                 </div>
                 <div className="right">
-                    
+                    <h1>New Customers</h1>
                 </div>
             </div>
-            register
         </div>
     );
 };
