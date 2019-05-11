@@ -7,7 +7,7 @@ class Wrapper extends Component {
                 <div>
                     {this.props.children}
                 </div>
-                FOOTER
+                
             </div>
         );
     }
