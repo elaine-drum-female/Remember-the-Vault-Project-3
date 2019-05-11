@@ -67,6 +67,12 @@ class Login extends Component {
                         formData={this.state.formData.email}
                         change={(element)=> this.updateForm(element)}
                     />
+
+                    <FormField
+                        id={'password'}
+                        formData={this.state.formData.password}
+                        change={(element)=> this.updateForm(element)}
+                    />
                 </form>
             </div>
         );
