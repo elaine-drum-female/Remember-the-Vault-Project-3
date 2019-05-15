@@ -1,12 +1,17 @@
 import React from 'react';
+import Container from "../../Container";
+import Row from "../../Row";
+import Col from "../../Col";
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="container">
-                Testing for the footer
-            </div>
-        </footer>
+        <Container>
+            <Row>
+                <Col size="lg-12">
+                    <p className="text-center">FOOTER GOES HERE</p>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
