@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import Footer from "../Header_Footer/Footer";
+import Jumbotron from '../Jumbotron';
 
 class Wrapper extends Component {
     render() {
         return (
+            
             <div>
-                <div>
-                    {this.props.children}
-                </div>
-                
+                <Jumbotron/>
+                <Footer/>
             </div>
+            
         );
     }
 }
